@@ -40512,7 +40512,7 @@ struct unixFile {
 ** method was called.  If xOpen() is called from a different process id,
 ** indicating that a fork() has occurred, the PRNG will be reset.
 */
-static pid_t randomnessPid = 0;
+static _Atomic pid_t randomnessPid = 0;
 
 /*
 ** Allowed values for the unixFile.ctrlFlags bitmask:
